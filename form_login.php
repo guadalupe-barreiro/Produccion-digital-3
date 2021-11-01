@@ -79,17 +79,17 @@
                     <span class="h2 fw-bold mb-0" style="font-family: 'Baumans'; font-size: 40px; font-weight: 700;">Iniciar Sesión</span>
                   </div>
                   <div class="form-outline mb-4">
-                    <input type="email" id="form2Example17" placeholder="Email" class="form-control form-control-lg" />
+                    <input type="name" id="form2Example17" placeholder="usuario" class="form-control form-control-lg" />
                   </div>
 
                   <div class="form-outline mb-4">
-                    <input type="password" id="form2Example27" placeholder="Contraseña"  class="form-control form-control-lg" />
+                    <input type="password" id="form2Example27" placeholder="password"  class="form-control form-control-lg" />
                   </div>
 
                   <div class="pt-1 mb-4">
                     <button class="btn btn-warning btn-lg btn-block" style="color: white;" type="submit" value="Login">Iniciar Sesión</button>
                   </div>
-                  <p class="pb-lg-2" style="color: #393f81;">No tenes cuenta? <a href="registro.html" style="color: #393f81;">Registrate</a></p>
+                  <p class="pb-lg-2" style="color: #393f81;">No tenes cuenta? <a href="form_registro.php" style="color: #393f81;">Registrate</a></p>
                 </form>
 
               </div>

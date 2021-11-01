@@ -58,47 +58,35 @@
       </header>
 
 <section class="vh-100">
-  <div class="container py-3 h-100">
-    <div class="row d-flex justify-content-center align-items-center h-100">
-      <div class="col col-xl-10">
-        <div class="card" style="border-radius: 1rem;">
-          <div class="row g-0">
-            <div class="col-md-6 col-lg-5 d-none d-md-block">
-              <img
-                src="img/login.png"
-                alt="login form"
-                class="img-fluid" style="border-radius: 1rem 0 0 1rem;"
-              />
-            </div>
-            <div class="col-md-6 col-lg-7 d-flex align-items-center">
-              <div class="card-body p-4 p-lg-5 text-black">
 
-                <form action="login.php" method="post">
+    <?php
 
-                  <div class="d-flex align-items-center mb-3 pb-1">
-                    <span class="h2 fw-bold mb-0" style="font-family: 'Baumans'; font-size: 40px; font-weight: 700;">Iniciar Sesión</span>
-                  </div>
-                  <div class="form-outline mb-4">
-                    <input type="email" id="form2Example17" placeholder="Email" class="form-control form-control-lg" />
-                  </div>
 
-                  <div class="form-outline mb-4">
-                    <input type="password" id="form2Example27" placeholder="Contraseña"  class="form-control form-control-lg" />
-                  </div>
+    $usuario = $_POST['usuario']; 
+    $password = $_POST['password'];
+    
+    include("conexion.php");
+    
+    $consulta = mysqli_query($conexion, "SELECT nombre, apellido, email FROM usuarios WHERE usuario='$usuario' AND password='$password'");
+    
+    $resultado = mysqli_num_rows($consulta);
+    
+    if($resultado!=0){
+        $respuesta=mysqli_fetch_array($consulta);
+            echo "Hola ".$respuesta['nombre']." ".$respuesta['apellido']."<br />";
+            echo "te damos el acceso al secreto de la vida.";
+            echo "<a href='http://www.google.com'>El secreto</a>";	
+    
+    } else {
+        echo "No es un usuario registrado";
+        include ("form_registro.php");
+    }
+    
+    
+    ?>
+    
 
-                  <div class="pt-1 mb-4">
-                    <button class="btn btn-warning btn-lg btn-block" style="color: white;" type="submit" value="Login">Iniciar Sesión</button>
-                  </div>
-                  <p class="pb-lg-2" style="color: #393f81;">No tenes cuenta? <a href="registro.html" style="color: #393f81;">Registrate</a></p>
-                </form>
 
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
 </section>
 
 </body>

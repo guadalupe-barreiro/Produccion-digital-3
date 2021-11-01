@@ -18,7 +18,7 @@
         <nav class="">
           <div style="background-color: #ff0000;"> 
           <a class="navbar-brand navbar-nav navbar-expand-xl col-12" href="index.html">
-            <p class="fs-1">Aprendiendo Bauhaus</p>
+            <h1 class="fs-1">Aprendiendo Bauhaus</h1>
           </a>
           </div>
       
@@ -44,13 +44,13 @@
                   <a class="nav-link" href="contacto.html">Contacto</a>
                 </li>
                 <li class="nav-item btn border-0  btn-sm botonSearch">
-                  <form class="form-inline">
-                    <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-                    <button class="btn btn-outline-primary my-2 my-sm-0" type="submit">Search</button>
+                  <form class="form-inline" action="resultados_buscar.php" method="post">
+                    <input class="form-control mr-sm-2" name="buscar" type="search" placeholder="Artistas" aria-label="Search">
+                    <button class="btn btn-outline-primary my-2 my-sm-0" type="submit">Buscar</button>
                   </form>
                 </li>
                 <li class="nav-item btn border-0  btn-sm botonLogin">
-                  <a class="nav-link" href="login.html">Iniciar Sesión</a>
+                  <a class="nav-link" href="form_login.php">Iniciar Sesión</a>
                 </li>
             </ul>
       
@@ -58,12 +58,13 @@
         </nav>
       </header>
 <section>
-  <div class="container contact-form">
-    <div class="contact-image">
-        <img src="img/sillónF51.jpg" alt="rocket_contact"/>
-    </div>
+  
+  <div style="text-align: center; padding-top: 50px;">
+    <h2 style="font-family: 'Baumans'; font-size: 40px; font-weight: 700;">Dejanos tu Mensaje</h2>
+  </div>
+  
+  <div class="container contact-form" >
     <form method="post">
-        <h3>Dejanos tu Mensaje</h3>
        <div class="row">
             <div class="col-md-6">
                 <div class="form-group">
@@ -86,6 +87,11 @@
             </div>
         </div>
     </form>
+
+    <div class="contact-image">
+      <img src="img/sillónF51.jpg" alt="rocket_contact"/>
+  </div>
+
 </div>
 
 </section>

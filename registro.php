@@ -10,17 +10,14 @@
 	<link href="css/bootstrap.min.css" rel="stylesheet">
 	
 	<link rel="stylesheet" href="css/estilos.css">
-
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
-
 </head>
 
-<body>
+<body id="page-top">
   <header> 
     <nav class="">
       <div style="background-color: #ff0000;"> 
       <a class="navbar-brand navbar-nav navbar-expand-xl col-12" href="index.html">
-        <h1 class="fs-1">Aprendiendo Bauhaus</h1>
+        <h1 class="fs-1" >Aprendiendo Bauhaus</h1>
       </a>
       </div>
   
@@ -60,66 +57,41 @@
     </nav>
   </header>
 
-  <section>
+<section class="vh-100">
 
-    <div style="text-align: center; padding: 50px;">
-      <h2 style="font-family: 'Baumans'; font-size: 40px; font-weight: 700;">Filosofia Bauhaus</h2>
-    </div>
+<?php
+$nombre=$_POST['nombre y apellido'];
+$email=$_POST['email'];
+$usuario=$_POST['usuario'];
+$password=md5($_POST['password']);
 
-<div class="container-fluid">   
-<div class="row m-0 justify-content-center">
-      <div class="col-3 justify-content-around" >
-        <img src="img/filosofia1.png" class="rounded mx-auto d-block w-100 animate__animated animate__fadeInLeft " alt="">
-      </div>
-      <div class="col-4 justify-content-around">
-       <p> Fomentaban una forma de pensar económica. 
-           Teoría: "la forma sigue a la función".
-           Buscaban que los elementos sean principalmente funcionales y 
-           luego cumplan un criterio estético.
-           “El estilo Bauhaus se caracterizó por la ausencia de ornamentos en los diseños, 
-           incluso en la fachada de los edificios, así como en la armonía 
-           entre la función y los medios de elaboración”. 
-           Mentalidad de no necesitar ornamentos adicionales, conseguian un gasto controlado, 
-           manejaban de mejor forma el tiempo consumido en los proyectos, etc. 
-           Buscaban fomentar la simplicidad y efectividad. </p>
+include("conexion.php");
 
-       </div>
-       <div class="col-3 justify-content-around" >
-        <img src="img/filosofia2.png" class="rounded mx-auto d-block w-100 animate__animated animate__fadeInLeft" alt="">
-       </div>
-       
-      </div>
-    </div> 
-    <br>
 
-    <div class="col d-flex justify-content-center">
-    <div class="ratio ratio-16x9">
+$consulta = mysqli_query($conexion, "INSERT INTO usuarios VALUES(0,'$nombre', '$email','$usuario','$password')");
 
-      <iframe  width="1050" height="315" src="https://www.youtube.com/watch?v=VriXza6JefY" frameborder="0" allow="accelerometer; autopley; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
-      </iframe>
 
-    </div>
-    </div>
+header("Location:form_login.php");
 
-  </div>
+?>	
+    
 </section>
+
+</body>
 
 <footer>
   <div class="container-fluid text-center bg1 p-5" style="background-color: #185fd5;">
     <h6 style="color: white;">«Copyright © 2021 | Barreiro Guadalupe»</h6>
     <a style="color: white;">Proyecto Integrador Final - Produccion digital II - Universidad de Palermo</a>
-    
   </div>
   </footer>
-</body>
-
+	
 <!-- Bootstrap JS -->
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
 
+</html>
 
-
-
-
+</body>
 </html>

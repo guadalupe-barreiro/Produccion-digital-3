@@ -18,7 +18,7 @@
   <nav class="">
     <div style="background-color: #ff0000;"> 
     <a class="navbar-brand navbar-nav navbar-expand-xl col-12" href="index.html">
-      <p class="fs-1">Aprendiendo Bauhaus</p>
+      <h1 class="fs-1">Aprendiendo Bauhaus</h1>
     </a>
     </div>
 
@@ -44,13 +44,13 @@
             <a class="nav-link" href="contacto.html">Contacto</a>
           </li>
           <li class="nav-item btn border-0  btn-sm botonSearch">
-            <form class="form-inline">
-              <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-              <button class="btn btn-outline-primary my-2 my-sm-0" type="submit">Search</button>
+            <form class="form-inline" action="resultados_buscar.php" method="post">
+              <input class="form-control mr-sm-2" name="buscar" type="search" placeholder="Artistas" aria-label="Search">
+              <button class="btn btn-outline-primary my-2 my-sm-0" type="submit">Buscar</button>
             </form>
           </li>
           <li class="nav-item btn border-0  btn-sm botonLogin">
-            <a class="nav-link" href="login.html">Iniciar Sesión</a>
+            <a class="nav-link" href="form_login.php">Iniciar Sesión</a>
           </li>
       </ul>
 
@@ -61,7 +61,7 @@
 <section>
 
     <div style="text-align: center; padding: 50px;">
-        <h2 style="font-family: 'Baumans'; font-size: 30px; font-weight: 700;">Actualidad</h2>
+        <h2 style="font-family: 'Baumans'; font-size: 40px; font-weight: 700;">Actualidad</h2>
     </div>
 
   
@@ -114,6 +114,14 @@
         </div>
     </div>
 
+    <div class="col d-flex justify-content-center">
+      <div class="ratio ratio-16x9">
+  
+        <iframe  width="560" height="315" src="https://www.youtube.com/watch?v=rp9VZfZxjMM" frameborder="0" allow="accelerometer; autopley; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
+        </iframe>
+  
+      </div>
+      </div>
 
   </div>
  

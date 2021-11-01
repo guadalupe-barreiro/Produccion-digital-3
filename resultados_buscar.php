@@ -44,7 +44,7 @@
             <a class="nav-link" href="contacto.html">Contacto</a>
           </li>
           <li class="nav-item btn border-0  btn-sm botonSearch">
-            <form class="form-inline" action="resultados_buscar.php" method="post">
+          <form class="form-inline" action="resultados_buscar.php" method="post">
               <input class="form-control mr-sm-2" name="buscar" type="search" placeholder="Artistas" aria-label="Search">
               <button class="btn btn-outline-primary my-2 my-sm-0" type="submit">Buscar</button>
             </form>
@@ -61,36 +61,51 @@
 <section>
        <br></br>
 
-      <div class="row cajaInicio">
-        <div class="container">
-          <h2 class="tituloInicio" style="font-family: 'Baumans'; font-size: 40px; font-weight: 700;">Bauhaus “casa de construcción”</h2>
-          <p>Fue la primera escuela de diseño del siglo XX, se convirtió en un referente dentro del ámbito del arte, arquitectura y diseño en reglas generales (abarcando una amplia gama de medios, materiales y disciplinas.). 
-          </p>
-        </div>
-      </div>
+       <?php
+       include('conexion.php');
+   
+       $buscar = $_POST['buscar'];
+   
+       
+       echo "Su consulta: <em>".$buscar."</em><br>";
+   
+       $consulta = mysqli_query($conexion, "SELECT * FROM artistas WHERE nombre LIKE '%$buscar%' OR apellido LIKE '%$buscar%' ");
+     
+   
+   ?>
+   <article style="width:60%;margin:0 auto;border:solid;padding:10px">
+       <p>Cantidad de Resultados: 
+       <?php
+           $nros=mysqli_num_rows($consulta);
+           echo $nros;
+       ?>
+       </p>
+       
+       <?php
+           while($resultados=mysqli_fetch_array($consulta)) {
+       ?>
+       <p>
+       <?php	
+               echo $resultados['nombre'] . " ";
+               echo $resultados['apellido'];
+               echo $resultados['bio'];
+       ?>
+       </p>
 
-      <div class="container-fluid row justify-content-center">
-        <div class="col-6 p-3 ">
-          
-          <div class="row-sm justify-content-center">
-            <a href="creaciones.html"><img src="img/kdhome.png" class="rounded mx-auto d-block" alt=""></a>
-          </div>
+       <img src="<?php  echo $resultados['foto']; ?>">
 
-          <div class="row justify-content-center p-5" >
-            <div class="col-6 col-lg-5 col-xl-4">
-              <a href="Personajes.html"><img src="img/personashome.png" class="rounded mx-auto d-block" alt=""></a>
-            </div>   
-            <div class="col-6 col-lg-5 col-xl-4">
-              <a href="filosofia.html"><img src="img/graficohome.png" class="rounded mx-auto d-block" alt=""></a>
-            </div>        
-          </div>
-        </div>
-        <div class="col-4 p-3">
-          <a href="despuesde1933.html"><img src="img/edificionhome.png" class="rounded mx-auto d-block" alt=""></a>
-        </div>
-      </div>
-  
-    </section>
+       <hr/>
+       
+       <?php
+           }
+   
+           mysqli_free_result($consulta);
+           mysqli_close($conexion);
+   
+       ?>
+   </article>
+
+</section>
 
     <footer>
       <div class="container-fluid text-center bg1 p-5" style="background-color: #185fd5;">

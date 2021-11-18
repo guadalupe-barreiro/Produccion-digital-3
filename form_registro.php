@@ -8,56 +8,74 @@
 	<!-- Instalamos Bootstrap CSS--> 
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
 	<link href="css/bootstrap.min.css" rel="stylesheet">
+
+  <script src="https://use.fontawesome.com/releases/v5.15.4/js/all.js" crossorigin="anonymous"></script>
 	
 	<link rel="stylesheet" href="css/estilos.css">
 </head>
 
-<body id="page-top">
-  <header> 
-    <nav class="">
-      <div style="background-color: #ff0000;"> 
-      <a class="navbar-brand navbar-nav navbar-expand-xl col-12" href="index.html">
-        <h1 class="fs-1" >Aprendiendo Bauhaus</h1>
-      </a>
-      </div>
-  
-  
-      <div class="menu" >
-        <ul class="opcionesmenu border border-start-0 border-end-0 border-warning">
-          <li class="nav-item btn border-0 btn-outline-warning btn-sm">
-            <a class="nav-link" href="filosofia.html">Filosofia</a>
+<body>
+
+<header> 
+  <nav class="">
+    <div style="background-color: #ff0000;"> 
+    <a class="navbar-brand navbar-nav navbar-expand-xl col-12" href="index.html">
+      <h1 class="fs-1">Aprendiendo Bauhaus</h1>
+    </a>
+    </div>
+
+
+    <div class="menu" >
+      <ul class="opcionesmenu border border-start-0 border-end-0 border-warning">
+        <li class="nav-item btn border-0 btn-outline-warning btn-sm">
+          <a class="nav-link" href="filosofia.html">Filosofia</a>
+        </li>
+        <li class="nav-item btn border-0 btn-outline-warning btn-sm">
+          <a class="nav-link" href="creaciones.html">Creaciones</a>
+        </li>
+        <li class="nav-item btn border-0 btn-outline-warning btn-sm">
+          <a class="nav-link" href="Personajes.html">Personajes principales</a>
+        </li>
+           <li class="nav-item btn border-0 btn-outline-warning btn-sm">
+          <a class="nav-link" href="1919a1933.html">1919 - 1933</a>
+        </li>
+        <li class="nav-item btn border-0 btn-outline-warning btn-sm">
+            <a class="nav-link" href="despuesde1933.html">Actualidad</a>
           </li>
           <li class="nav-item btn border-0 btn-outline-warning btn-sm">
-            <a class="nav-link" href="creaciones.html">Creaciones</a>
+            <a class="nav-link" href="contacto.html">Contacto</a>
           </li>
           <li class="nav-item btn border-0 btn-outline-warning btn-sm">
-            <a class="nav-link" href="Personajes.html">Personajes principales</a>
+            <a class="nav-link" href="semana.php">Semanal</a>
           </li>
-             <li class="nav-item btn border-0 btn-outline-warning btn-sm">
-            <a class="nav-link" href="1919a1933.html">1919 - 1933</a>
+          <li class="nav-item btn border-0  btn-sm botonSearch">
+            <form class="form-inline" action="resultados_buscar.php" method="post">
+              <input class="form-control mr-sm-2" name="buscar" type="search" placeholder="Artistas" aria-label="Search">
+              <button class="btn btn-outline-primary my-2 my-sm-0" type="submit">Buscar</button>
+            </form>
           </li>
-          <li class="nav-item btn border-0 btn-outline-warning btn-sm">
-              <a class="nav-link" href="despuesde1933.html">Actualidad</a>
-            </li>
-            <li class="nav-item btn border-0 btn-outline-warning btn-sm">
-              <a class="nav-link" href="contacto.html">Contacto</a>
-            </li>
-            <li class="nav-item btn border-0  btn-sm botonSearch">
-              <form class="form-inline" action="resultados_buscar.php" method="post">
-                <input class="form-control mr-sm-2" name="buscar" type="search" placeholder="Artistas" aria-label="Search">
-                <button class="btn btn-outline-primary my-2 my-sm-0" type="submit">Buscar</button>
-              </form>
-            </li>
-            <li class="nav-item btn border-0  btn-sm botonLogin">
-              <a class="nav-link" href="form_login.php">Iniciar Sesión</a>
-            </li>
-        </ul>
-  
-      </div>
-    </nav>
-  </header>
+          <li class="nav-item btn botonLogin">
+            <a class="nav-link" href="form_login.php"><i class="fas fa-user"></i></a>
+          </li>
+      </ul>
+     
+    </div>
+  </nav>
+</header>
 
 <section class="vh-100">
+
+<?php
+
+
+if(array_key_exists( "nologin", $_GET)){
+ 
+echo " <h5  style= 'background-color: #ff0000; text-align: center; color: #ffffff;     margin-left: 20%; margin-right: 20%;' >No es un usuario registrado, por favor complete el formulario de registro <h5>";
+
+}
+
+?>
+
   <div class="container py-3 h-100">
     <div class="row d-flex justify-content-center align-items-center h-100">
       <div class="col col-xl-10">
@@ -79,16 +97,16 @@
                     <span class="h2 fw-bold mb-0" style="font-family: 'Baumans'; font-size: 40px; font-weight: 700;">Registrarme</span>
                   </div>
                   <div class="form-outline mb-4">
-                    <input type="name" id="form2Example17" placeholder="Nombre y Apellido" class="form-control form-control-lg" required  />
+                    <input type="name" id="form2Example17" placeholder="Nombre y Apellido" class="form-control form-control-lg" required  name= "nombre"/>
                   </div>
                   <div class="form-outline mb-4">
-                    <input type="email" id="form2Example17" placeholder="Email" class="form-control form-control-lg"  required />
+                    <input type="email" id="form2Example17" placeholder="Email" class="form-control form-control-lg"  required  name= "email"/>
                   </div>
                   <div class="form-outline mb-4">
-                    <input type="name" id="form2Example17" placeholder="Usuario" class="form-control form-control-lg" />
+                    <input type="name" id="form2Example17" placeholder="Usuario" class="form-control form-control-lg"  name= "usuario"/>
                   </div>
                   <div class="form-outline mb-4">
-                    <input type="password" id="form2Example27" placeholder="Contraseña"  class="form-control form-control-lg" />
+                    <input type="password" id="form2Example27" placeholder="Contraseña"  class="form-control form-control-lg"  name= "password"/>
                   </div>
 
                   

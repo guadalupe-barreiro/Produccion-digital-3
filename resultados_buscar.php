@@ -8,6 +8,8 @@
 	<!-- Instalamos Bootstrap CSS--> 
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
 	<link href="css/bootstrap.min.css" rel="stylesheet">
+
+  <script src="https://use.fontawesome.com/releases/v5.15.4/js/all.js" crossorigin="anonymous"></script>
 	
 	<link rel="stylesheet" href="css/estilos.css">
 </head>
@@ -16,7 +18,7 @@
 
 <header> 
   <nav class="">
-    <div style="background-color: #ff0000;"> 
+    <div style="background-color:#ff0000;"> 
     <a class="navbar-brand navbar-nav navbar-expand-xl col-12" href="index.html">
       <h1 class="fs-1">Aprendiendo Bauhaus</h1>
     </a>
@@ -43,17 +45,20 @@
           <li class="nav-item btn border-0 btn-outline-warning btn-sm">
             <a class="nav-link" href="contacto.html">Contacto</a>
           </li>
+          <li class="nav-item btn border-0 btn-outline-warning btn-sm">
+            <a class="nav-link" href="semana.php">Semanal</a>
+          </li>
           <li class="nav-item btn border-0  btn-sm botonSearch">
-          <form class="form-inline" action="resultados_buscar.php" method="post">
+            <form class="form-inline" action="resultados_buscar.php" method="post">
               <input class="form-control mr-sm-2" name="buscar" type="search" placeholder="Artistas" aria-label="Search">
               <button class="btn btn-outline-primary my-2 my-sm-0" type="submit">Buscar</button>
             </form>
           </li>
-          <li class="nav-item btn border-0  btn-sm botonLogin">
-            <a class="nav-link" href="form_login.php">Iniciar Sesión</a>
+          <li class="nav-item btn botonLogin">
+            <a class="nav-link" href="form_login.php"><i class="fas fa-user"></i></a>
           </li>
       </ul>
-
+     
     </div>
   </nav>
 </header>
@@ -61,6 +66,7 @@
 <section>
        <br></br>
 
+       <div style="color:#185fd5;">
        <?php
        include('conexion.php');
    
@@ -70,11 +76,11 @@
        echo "Su consulta: <em>".$buscar."</em><br>";
    
        $consulta = mysqli_query($conexion, "SELECT * FROM artistas WHERE nombre LIKE '%$buscar%' OR apellido LIKE '%$buscar%' ");
-     
-   
-   ?>
-   <article style="width:60%;margin:0 auto;border:solid;padding:10px">
-       <p>Cantidad de Resultados: 
+        ?>
+        </div>
+
+   <article style="width:60%;margin:0 auto; border:solid #ff0000  ;padding:10px">
+       <p style="color: #ff0000;">Cantidad de Resultados: 
        <?php
            $nros=mysqli_num_rows($consulta);
            echo $nros;
@@ -85,14 +91,22 @@
            while($resultados=mysqli_fetch_array($consulta)) {
        ?>
        <p>
+      
+       <div style="color:  #185fd5;">
        <?php	
                echo $resultados['nombre'] . " ";
                echo $resultados['apellido'];
+       ?>
+       </div>
+
+       <div class="biobuscador">
+       <?php
                echo $resultados['bio'];
        ?>
+       </div>
        </p>
 
-       <img src="<?php  echo $resultados['foto']; ?>">
+       <img class="imgbuscador" src="<?php  echo $resultados['foto']; ?>">
 
        <hr/>
        

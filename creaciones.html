@@ -11,55 +11,60 @@
 
   <link rel="stylesheet" href="lightbox2-2.11.3/dist/css/lightbox.min.css">
   <script src="lightbox2-2.11.3/dist/js/lightbox-plus-jquery.min.js"></script>
+
+  <script src="https://use.fontawesome.com/releases/v5.15.4/js/all.js" crossorigin="anonymous"></script>
 	
 	<link rel="stylesheet" href="css/estilos.css">
 </head>
 
-<body id="page-top">
-    
-  <header> 
-    <nav class="">
-      <div style="background-color: #ff0000;"> 
-      <a class="navbar-brand navbar-nav navbar-expand-xl col-12" href="index.html">
-        <h1 class="fs-1">Aprendiendo Bauhaus</h1>
-      </a>
-      </div>
-  
-  
-      <div class="menu" >
-        <ul class="opcionesmenu border border-start-0 border-end-0 border-warning">
-          <li class="nav-item btn border-0 btn-outline-warning btn-sm">
-            <a class="nav-link" href="filosofia.html">Filosofia</a>
+<body>
+
+<header> 
+  <nav class="">
+    <div style="background-color: #ff0000;"> 
+    <a class="navbar-brand navbar-nav navbar-expand-xl col-12" href="index.html">
+      <h1 class="fs-1">Aprendiendo Bauhaus</h1>
+    </a>
+    </div>
+
+
+    <div class="menu" >
+      <ul class="opcionesmenu border border-start-0 border-end-0 border-warning">
+        <li class="nav-item btn border-0 btn-outline-warning btn-sm">
+          <a class="nav-link" href="filosofia.html">Filosofia</a>
+        </li>
+        <li class="nav-item btn border-0 btn-outline-warning btn-sm">
+          <a class="nav-link" href="creaciones.html">Creaciones</a>
+        </li>
+        <li class="nav-item btn border-0 btn-outline-warning btn-sm">
+          <a class="nav-link" href="Personajes.html">Personajes principales</a>
+        </li>
+           <li class="nav-item btn border-0 btn-outline-warning btn-sm">
+          <a class="nav-link" href="1919a1933.html">1919 - 1933</a>
+        </li>
+        <li class="nav-item btn border-0 btn-outline-warning btn-sm">
+            <a class="nav-link" href="despuesde1933.html">Actualidad</a>
           </li>
           <li class="nav-item btn border-0 btn-outline-warning btn-sm">
-            <a class="nav-link" href="creaciones.html">Creaciones</a>
+            <a class="nav-link" href="contacto.html">Contacto</a>
           </li>
           <li class="nav-item btn border-0 btn-outline-warning btn-sm">
-            <a class="nav-link" href="Personajes.html">Personajes principales</a>
+            <a class="nav-link" href="semana.php">Semanal</a>
           </li>
-             <li class="nav-item btn border-0 btn-outline-warning btn-sm">
-            <a class="nav-link" href="1919a1933.html">1919 - 1933</a>
+          <li class="nav-item btn border-0  btn-sm botonSearch">
+            <form class="form-inline" action="resultados_buscar.php" method="post">
+              <input class="form-control mr-sm-2" name="buscar" type="search" placeholder="Artistas" aria-label="Search">
+              <button class="btn btn-outline-primary my-2 my-sm-0" type="submit">Buscar</button>
+            </form>
           </li>
-          <li class="nav-item btn border-0 btn-outline-warning btn-sm">
-              <a class="nav-link" href="despuesde1933.html">Actualidad</a>
-            </li>
-            <li class="nav-item btn border-0 btn-outline-warning btn-sm">
-              <a class="nav-link" href="contacto.html">Contacto</a>
-            </li>
-            <li class="nav-item btn border-0  btn-sm botonSearch">
-              <form class="form-inline" action="resultados_buscar.php" method="post">
-                <input class="form-control mr-sm-2" name="buscar" type="search" placeholder="Artistas" aria-label="Search">
-                <button class="btn btn-outline-primary my-2 my-sm-0" type="submit">Buscar</button>
-              </form>
-            </li>
-            <li class="nav-item btn border-0  btn-sm botonLogin">
-              <a class="nav-link" href="form_login.php">Iniciar Sesión</a>
-            </li>
-        </ul>
-  
-      </div>
-    </nav>
-  </header>
+          <li class="nav-item btn botonLogin">
+            <a class="nav-link" href="form_login.php"><i class="fas fa-user"></i></a>
+          </li>
+      </ul>
+     
+    </div>
+  </nav>
+</header>
 
   <section>
 
@@ -71,7 +76,7 @@
       <div class="col-12 row p-5 justify-content-around">
           <div class="col-5">
              <div class=" justify-content-center galeria" > 
-                <a href="img/d4630f0842915eae3e9dc0fa0bf96050.jpg" data-lightbox="mygallery" data-title="obra nro1">
+                <a href="img/d4630f0842915eae3e9dc0fa0bf96050.jpg" data-lightbox="mygallery" data-title="Plano de Hannes Meyer">
                 <img src="img/hannes.png" class="rounded mx-auto d-block" alt="">
                 </a>
               </div>
@@ -79,14 +84,14 @@
              <br></br>
 
              <div class="justify-content-center galeria" > 
-                <a href="img/ballet.png" data-lightbox="mygallery" data-title="obra nro2">
+                <a href="img/teatro.jpg" data-lightbox="mygallery" data-title="Figurines del teatro de la Bauhaus">
                 <img src="img/ballet.png" class="rounded mx-auto d-block" alt="">
                 </a>
              </div>
           </div>
 
           <div class="col-2  galeria"> 
-            <a href="img/Gunta.jpg" data-lightbox="mygallery" data-title="obra nro3">
+            <a href="img/Gunta.jpg" data-lightbox="mygallery" data-title="Diseños textiles de Gunta Stölzl">
             <img src="img/Gunta.jpg" class="rounded mx-auto d-block" alt="">
             </a>
           </div>
@@ -94,12 +99,12 @@
           <div class="col-5  galeria">
             <div class="row justify-content-around "> 
                 <div class="row" > 
-                    <a href="img/bayer.jpg" data-lightbox="mygallery" data-title="obra nro4">
+                    <a href="img/bayer.jpg" data-lightbox="mygallery" data-title="Diseño de Herbert Bayer">
                     <img src="img/Hbayer.jpg.png" class="rounded mx-auto d-block" alt="">
                     </a>
                 </div>
                 <div class="row"> 
-                  <a href="img/BRNO CHAIR de Mies Van Der Rohe dise+¦ada entre 1929-1930.jfif" data-lightbox="mygallery" data-title="obra nro5">
+                  <a href="img/BRNO CHAIR de Mies Van Der Rohe dise+¦ada entre 1929-1930.jfif" data-lightbox="mygallery" data-title="BRNO CHAIR de Mies Van Der Rohe">
                     <img src="img/BRNOCHAIR.png" class="rounded mx-auto d-block" alt="">
                   </a>
                 </div>
@@ -108,8 +113,8 @@
             <br></br>
 
             <div class="col galeria" > 
-                <a href="img/profesores.png" data-lightbox="mygallery" data-title="obra nro6">
-                <img src="img/pro.png" class="rounded mx-auto d-block" alt="">
+                <a href="img/kd1.jpg" data-lightbox="mygallery" data-title="Wassily Kandinsky: pintando Yellow - Red - Blue (1925)">
+                <img src="img/kd2.png" class="rounded mx-auto d-block" alt="">
                 </a>
             </div>
           </div>
@@ -121,12 +126,12 @@
         <div class="col-5 galeria ">
           <div class="row justify-content-around "> 
               <div class="row" > 
-                  <a href="img/galeria2.png" data-lightbox="mygallery" data-title="obra nro7">
+                  <a href="img/tipografia.jpg" data-lightbox="mygallery" data-title="Tipografia de de Herbert Bayer">
                   <img src="img/galeria2.png" class="rounded mx-auto d-block" alt="">
                   </a>
               </div>
               <div class="row"> 
-                <a href="img/tela.png" data-lightbox="mygallery" data-title="obra nro8">
+                <a href="img/tela.png" data-lightbox="mygallery" data-title="Diseños textiles de Gunta Stölzl">
                   <img src="img/tela.png" class="rounded mx-auto d-block" alt="">
                   </a>
               </div>
@@ -135,7 +140,7 @@
           <br></br>
 
           <div class="col galeria" > 
-            <a href="img/galeria5.png" data-lightbox="mygallery" data-title="obra nro9">
+            <a href="img/cuna.jpg" data-lightbox="mygallery" data-title="Cuna Bauhaus - Diseño de muebles">
               <img src="img/galeria5.png" class="rounded mx-auto d-block" alt="">
               </a>
           </div>
@@ -143,14 +148,14 @@
         
 
         <div class="col-2 galeria "> 
-          <a href="img/galeria4.png" data-lightbox="mygallery" data-title="obra nro10">
+          <a href="img/galeria4.png" data-lightbox="mygallery" data-title=" Light-Space Modulator de László Moholy-Nagys">
           <img src="img/galeria4.png" class="rounded mx-auto d-block" alt="">
           </a>
         </div>
 
         <div class="col-5 galeria">
           <div class=" justify-content-center" > 
-            <a href="img/galeria4.png" data-lightbox="mygallery" data-title="obra nro11">
+            <a href="img/galeria3.png" data-lightbox="mygallery" data-title="Diseño textil">
              <img src="img/galeria3.png" class="rounded mx-auto d-block" alt="">
             </a>
           </div>
@@ -158,7 +163,7 @@
           <br></br>
 
           <div class="justify-content-center galeria" > 
-            <a href="img/galeria1.png" data-lightbox="mygallery" data-title="obra nro12">
+            <a href="img/tetera.jpg" data-lightbox="mygallery" data-title="Diseño de tetera">
              <img src="img/galeria1.png" class="rounded mx-auto d-block" alt="">
             </a>
           </div>

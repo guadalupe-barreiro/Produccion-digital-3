@@ -1,4 +1,10 @@
-<?php session_start(); ?>
+<?php
+session_start();
+
+if(array_key_exists( "logeado", $_SESSION)){
+
+?>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -64,58 +70,48 @@
   </nav>
 </header>
 
-<section class="vh-100">
+<section >
+
+<div style="text-align: center; padding: 50px;">
+<h2 class='semanatit'> La obra de esta semana es: </h2>
+</div>
+
+<br></br>
+
+<div>
+<img class="pinturasemana" src="img/RedBalloon.jpg" alt="">
+            <h6 style="text-align: center;">Red Balloon (1922) Artist: Paul Klee.</h6>
+</div>
+
+<br></br>
+
+<p style="text-align: center;">
+<?php
+echo $_SESSION["nombre"];
+ echo ' muchas gracias por formar parte de "Aprendiendo Bauhaus" ';
+ 
+?>
+<p>
 
 
-    <?php
+<h4 class="semanasalir" style="text-align: center;">
+<button type="button" class="btn btn-danger">
+    <a style="text-decoration-line: none; text-decoration-color: #fff;
+    color: #fff;" href="salir.php">Cerrar sesión</a>
+</button>
+</h4>
 
-
-    $usuario = $_POST['usuario']; 
-    $password = md5($_POST['password']);
-    
-    include("conexion.php");
-    
-    $consulta = mysqli_query($conexion, "SELECT nombre,  email FROM usuarios WHERE usuario='$usuario' AND password='$password'");
-    
-    $resultado = mysqli_num_rows($consulta);
-    
-    if($resultado!=0){
-        $respuesta=mysqli_fetch_array($consulta);
-        
-        
-        
-        $_SESSION["nombre"]=$respuesta['nombre'];
-        $_SESSION["logeado"]="ok";
-      } 
-    
-    else {
-        
-        header('Location: form_registro.php?nologin=1');
-        
-    }
-    
-    
-    ?>
-
-    
-  <div>
-    <br></br>
-    <br></br>
-  <h3  style="font-family: 'Baumans'; font-size: 40px; font-weight: 700; text-align: center; margin-left: 20%; margin-right: 20%;" >
-    <?php
-    echo "Hola ".$_SESSION['nombre']." <br />";
-       ?>
-    </h3>
-
-    <p style="text-align: center; margin-left: 20%; margin-right: 20%;"> Bienvenido a <a style="text-decoration-line: none; text-decoration-color: red;
-    color: red;" href='index.php'> Aprendiendo Bauhaus </a> </p>
-     
-    <p style="text-align: center; margin-left: 20%; margin-right: 20%;"> Te invitamos a observar <a style="text-decoration-line: none; text-decoration-color: red;
-    color: red;" href='semana.php'> la obra de la semana </a> </p>
-
-  </div>
 
 </section>
+
+<?php
+}
+
+else{
+  header('Location: form_registro.php');
+}
+?>
+
 
 </body>
 

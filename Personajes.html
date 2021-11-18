@@ -8,54 +8,60 @@
 	<!-- Instalamos Bootstrap CSS--> 
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
 	<link href="css/bootstrap.min.css" rel="stylesheet">
+
+  <script src="https://use.fontawesome.com/releases/v5.15.4/js/all.js" crossorigin="anonymous"></script>
 	
 	<link rel="stylesheet" href="css/estilos.css">
 </head>
 
-<body id="page-top">
-  <header> 
-    <nav class="">
-      <div style="background-color: #ff0000;"> 
-      <a class="navbar-brand navbar-nav navbar-expand-xl col-12" href="index.html">
-        <h1 class="fs-1">Aprendiendo Bauhaus</h1>
-      </a>
-      </div>
-  
-  
-      <div class="menu" >
-        <ul class="opcionesmenu border border-start-0 border-end-0 border-warning">
-          <li class="nav-item btn border-0 btn-outline-warning btn-sm">
-            <a class="nav-link" href="filosofia.html">Filosofia</a>
+<body>
+
+<header> 
+  <nav class="">
+    <div style="background-color: #ff0000;"> 
+    <a class="navbar-brand navbar-nav navbar-expand-xl col-12" href="index.html">
+      <h1 class="fs-1">Aprendiendo Bauhaus</h1>
+    </a>
+    </div>
+
+
+    <div class="menu" >
+      <ul class="opcionesmenu border border-start-0 border-end-0 border-warning">
+        <li class="nav-item btn border-0 btn-outline-warning btn-sm">
+          <a class="nav-link" href="filosofia.html">Filosofia</a>
+        </li>
+        <li class="nav-item btn border-0 btn-outline-warning btn-sm">
+          <a class="nav-link" href="creaciones.html">Creaciones</a>
+        </li>
+        <li class="nav-item btn border-0 btn-outline-warning btn-sm">
+          <a class="nav-link" href="Personajes.html">Personajes principales</a>
+        </li>
+           <li class="nav-item btn border-0 btn-outline-warning btn-sm">
+          <a class="nav-link" href="1919a1933.html">1919 - 1933</a>
+        </li>
+        <li class="nav-item btn border-0 btn-outline-warning btn-sm">
+            <a class="nav-link" href="despuesde1933.html">Actualidad</a>
           </li>
           <li class="nav-item btn border-0 btn-outline-warning btn-sm">
-            <a class="nav-link" href="creaciones.html">Creaciones</a>
+            <a class="nav-link" href="contacto.html">Contacto</a>
           </li>
           <li class="nav-item btn border-0 btn-outline-warning btn-sm">
-            <a class="nav-link" href="Personajes.html">Personajes principales</a>
+            <a class="nav-link" href="semana.php">Semanal</a>
           </li>
-             <li class="nav-item btn border-0 btn-outline-warning btn-sm">
-            <a class="nav-link" href="1919a1933.html">1919 - 1933</a>
+          <li class="nav-item btn border-0  btn-sm botonSearch">
+            <form class="form-inline" action="resultados_buscar.php" method="post">
+              <input class="form-control mr-sm-2" name="buscar" type="search" placeholder="Artistas" aria-label="Search">
+              <button class="btn btn-outline-primary my-2 my-sm-0" type="submit">Buscar</button>
+            </form>
           </li>
-          <li class="nav-item btn border-0 btn-outline-warning btn-sm">
-              <a class="nav-link" href="despuesde1933.html">Actualidad</a>
-            </li>
-            <li class="nav-item btn border-0 btn-outline-warning btn-sm">
-              <a class="nav-link" href="contacto.html">Contacto</a>
-            </li>
-            <li class="nav-item btn border-0  btn-sm botonSearch">
-              <form class="form-inline" action="resultados_buscar.php" method="post">
-                <input class="form-control mr-sm-2" name="buscar" type="search" placeholder="Artistas" aria-label="Search">
-                <button class="btn btn-outline-primary my-2 my-sm-0" type="submit">Buscar</button>
-              </form>
-            </li>
-            <li class="nav-item btn border-0  btn-sm botonLogin">
-              <a class="nav-link" href="form_login.php">Iniciar Sesión</a>
-            </li>
-        </ul>
-  
-      </div>
-    </nav>
-  </header>
+          <li class="nav-item btn botonLogin">
+            <a class="nav-link" href="form_login.php"><i class="fas fa-user"></i></a>
+          </li>
+      </ul>
+     
+    </div>
+  </nav>
+</header>
    <section> 
 
     <div style="text-align: center; padding: 50px;">
@@ -115,26 +121,26 @@
                     <div class="modal-dialog" role="document">
                         <div class="modal-content">
                             <div class="modal-header">
-                            <h5 class="modal-title" id="exampleModalLabelWalter" style="color: #fae206;">Walter Gropius (1883-1969)</h5>
+                            <h5 class="modal-title" id="exampleModalLabelWalter" style="color: #ffc107;">Walter Gropius (1883-1969)</h5>
                             <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                                 <span aria-hidden="true">&times;</span>
                             </button>
                             </div>
-                            <div class="modal-body" style="background-color: #fae2064d; text-align: start;">
-                              <p><strong>Arquitecto y profesor alemán</strong>, fundador de la Bauhaus. Sus hipótesis más destacadas fueron <i>la economía expresiva 
+                            <div class="modal-body" style="background-color: #ffc10752; text-align: start;">
+                              <p><strong style="color: #ffc107;">Arquitecto y profesor alemán</strong>, fundador de la Bauhaus. Sus hipótesis más destacadas fueron <i>la economía expresiva 
                               y la adecuación a los medios productivos para todas las formas de diseño</i>, una especie de unificación entre el arte y la ingeniería. 
                               Conceptos que se ven reflejados en sus edificaciones. Nació en Berlín en 1883 y estudió arquitectura en las universidades de Múnich
                                y Berlín-Carlottenburg.</p>
                               <p>En colaboración con Adolph Meyer proyectó la fábrica Fagus en Alfeld (1910-1911) y el edificio de oficinas de la exposición del 
                               Werkbund en Colonia (1914), que le dieron a conocer en toda Europa. Después de la I Guerra Mundial dirigió dos escuelas de arte en 
-                              Weimar, hasta que las transformó, en 1919, en <strong>la nueva Staatliches Bauhaus</strong>, donde <i>introdujo una pedagogía que aunaba el estudio del
+                              Weimar, hasta que las transformó, en 1919, en <strong style="color: #ffc107;">la nueva Staatliches Bauhaus</strong>, donde <i>introdujo una pedagogía que aunaba el estudio del
                                arte con el de la tecnología</i>. Cuando la escuela se trasladó a Dessau, Gropius proyectó los edificios que la acogerán, caracterizados
                                 por una exquisita simplicidad formal y por el empleo de grandes superficies de vidrio plano. Gropius abandonó su cargo como 
                                 director de la Bauhaus en 1928 y continuó su carrera como arquitecto. </p>
                               <p><b>Su oposición al partido nazi le obligó a abandonar 
                                 Alemania en 1934</b>, y después de pasar varios años en Gran Bretaña emigró a Estados Unidos para dar clases en la Universidad 
                                 de Harvard (donde introdujo muchas de las ideas desarrolladas en la Bauhaus).También construyó el edificio de la Panam (1963) 
-                                en Nueva York, en colaboración con Pietro Beluschi. <strong>Gropius murió el 5 de julio de 1969 en Boston</strong>.</p>
+                                en Nueva York, en colaboración con Pietro Beluschi. <strong style="color: #ffc107;">Gropius murió el 5 de julio de 1969 en Boston</strong>.</p>
                               
                             <div class="modal-footer">
                             <button type="button" class="btn btn-warning" style="border-radius:25px ;"data-dismiss="modal">Close</button>
@@ -213,20 +219,20 @@
                               </button>
                             </div>
                             <div class="modal-body" style="background-color: #ff000059; text-align: start;">
-                              <p><strong>Arquitecto alemán</strong>. Su primer oficio fue de cantero, luego se mudo a Berlín donde trabajó  
+                              <p><strong style="color: red;">Arquitecto alemán</strong>. Su primer oficio fue de cantero, luego se mudo a Berlín donde trabajó  
                               en el estudio de <i>Bruno Paul</i> y, de 1908 a 1911, en el de <i>Peter Behrens</i>. Orientado hacia la 
                               arquitectura neoclásica pero, después de un viaje  a los Países Bajos en 1912, sus intereses cambiaron.</p>
                               <p>Tras la Primera Guerra Mundial, se adhirió a <i>diversos movimientos de vanguardia</i> 
-                              (Novembergruppe, De Stijl) y <strong>empezó a realizar proyectos revolucionarios</strong>, ej: un edificio 
+                              (Novembergruppe, De Stijl) y <strong style="color: red;">empezó a realizar proyectos revolucionarios</strong>, ej: un edificio 
                               de oficinas de la Friedrichstrasse de Berlín. Publico la revista G, en 1926 llevó a cabo 
                               la casa Wolf en Guben, la casa Hermann Lange en Krefeld, el monumento a Karl Liebknecht y Rosa Luxemburgo.
-                              Convertido en un <strong>arquitecto de prestigio</strong>, empezó a <i>recibir encargos</i> como por ejemplo:<i> un complejo experimental 
+                              Convertido en un <strong style="color: red;">arquitecto de prestigio</strong>, empezó a <i>recibir encargos</i> como por ejemplo:<i> un complejo experimental 
                               de viviendas para la Exposición de Stuttgart de 1927 (el Weissenhof Siedlung)</i> y <i>el pabellón de 
                               Alemania para la Exposición Internacional de Barcelona</i>.</p>
-                            <p>Suya es la famosa máxima: <strong>“menos es más”</strong>. Van der Rohe fue el tercer director de la Bauhaus, en 
+                            <p>Suya es la famosa máxima: <strong style="color: red;">“menos es más”</strong>. Van der Rohe fue el tercer director de la Bauhaus, en 
                               el momento más complicado de la escuela (de 1930 a 1933). Se esforzó por mantener la Bauhaus al 
                             <i>margen de la política</i>. Sin embargo, el partido nazi acabó cerrando el centro en 1933.</p> 
-                            <p><strong>Obligado a emigrar a Estados Unidos</strong>, nombrado director de la facultad de arquitectura del Illinois
+                            <p><strong style="color: red;">Obligado a emigrar a Estados Unidos</strong>, nombrado director de la facultad de arquitectura del Illinois
                                Technology Institute de Chicago (1938), genero fama por todo Estados Unidos.<i>Trabajó fundamentalmente 
                                en la capital de Illinois</i>.
                               1958-1959 Seagram Building de Nueva York y la Neue Nationalgalerie de Berlín (1962-1968). </p>
@@ -262,30 +268,30 @@
                        <div class="modal-dialog" role="document">
                            <div class="modal-content">
                                <div class="modal-header">
-                               <h5 class="modal-title" id="exampleModalLabelHerbert" style="color: #fae206;">Herbert Bayer (1900-1985)</h5>
+                               <h5 class="modal-title" id="exampleModalLabelHerbert" style="color: #ffc107;">Herbert Bayer (1900-1985)</h5>
                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                                    <span aria-hidden="true">&times;</span>
                                </button>
                                </div>
-                               <div class="modal-body" style="background-color: #fae2064f; text-align: start;">
-                                <p><strong>Diseñador gráfico y pintor austríaco</strong>. 1919 - 1920 fue aprendiz en el estudio del diseñador 
+                               <div class="modal-body" style="background-color: #ffc10756; text-align: start;">
+                                <p><strong style="color: #ffc107;">Diseñador gráfico y pintor austríaco</strong>. 1919 - 1920 fue aprendiz en el estudio del diseñador 
                                 Georg Schmidtthammer, en Linz, donde realizó sus <i>primeros trabajos tipográficos</i>. En 1921 
                                 trabajó en el taller del diseñador Emanuel Margol en Darmstald.</p>
-                              <p><strong>Estudió en la Bauhaus</strong> entre 1921-1923 y de 1924-1925. Asistió al taller de pintura mural 
+                              <p><strong style="color: #ffc107;">Estudió en la Bauhaus</strong> entre 1921-1923 y de 1924-1925. Asistió al taller de pintura mural 
                                 con Schlemmer y Kandinsky. <i>Profesor en Bauhaus durante 1925 - 1928</i>. Director del  taller 
                                 de impresión y publicidad, taller de tipografía y diseño publicitario. Diseños  impresos 
                                 en la escuela. <i>Fue director de la Bauhaus de 1928 - 1930</i>. En 1928 dirigió la agencia publicitaria 
                                 Studio Dorland.</p>
-                              <p>Fue el diseñador de publicidad <strong>más innovador</strong> de la Bauhaus, <i>su trabajo se destaca por la temprana 
+                              <p>Fue el diseñador de publicidad <strong style="color: #ffc107;">más innovador</strong> de la Bauhaus, <i>su trabajo se destaca por la temprana 
                                 introducción de la fotografía en los años 20</i>. En los Estados Unidos pudo ampliar su actividad al 
                                 diseño del medio ambiente.</p>
-                              <p> <strong>Se dedicó a la pintura y la fotografía</strong>. <i>Emigró a EE.UU. en 1938</i>, mismo año que organiza la exposición 
+                              <p> <strong style="color: #ffc107;">Se dedicó a la pintura y la fotografía</strong>. <i>Emigró a EE.UU. en 1938</i>, mismo año que organiza la exposición 
                                 y catálogo Bauhaus 1919-1918 en el Museum of Modern Art. Trabajó en Nueva York como diseñador gráfico. 
                                 En 1946 realizó diseños en el Centro cultural Aspen/Colorado, con trabajos de pintura, diseño gráfico, 
                                 arquitectura y ordenamiento paisajístico.</p>
                               <p>De 1946 - 1956 fue consejero artístico de la Container Corporaton of America y desde 1966 de la Atlantic 
                                 Richfield Company. En 1968 realizó una exposición y catálogo <i>“50 años Bauhaus”</i> en Stuttgart. En 1975 se 
-                                trasladó a Montecito, California. <strong>Murió en Santa Bárbara</strong>.</p>
+                                trasladó a Montecito, California. <strong style="color: #ffc107;">Murió en Santa Bárbara</strong>.</p>
                                  
                                <div class="modal-footer">
                                <button type="button" class="btn btn-warning" style="border-radius:25px ;"data-dismiss="modal">Close</button>
@@ -354,23 +360,23 @@
                               </button>
                             </div>
                             <div class="modal-body" style="background-color: #ff000059; text-align: start;">
-                              <p>Pintor de origen ruso, <strong>arte abstracto</strong>. A los treinta años, Kandinsky abandonó la docencia y 
+                              <p>Pintor de origen ruso, <strong style="color: red;">arte abstracto</strong>. A los treinta años, Kandinsky abandonó la docencia y 
                               fue a estudiar pintura a Munich. <i>Su interés por el color se ve desde el comienzo de su carrera</i>, 
                               en sus primeras pinturas hay influencia del postimpresionismo, el fauvismo y el Jugendstil alemán.</p>
                             <p>1902 - 1907 Kandinsky realizó viajes a Francia, Países Bajos, Túnez, Italia y Rusia. Se instaló en
                                Murnau, donde pintó paisajes alpinos entre los años 1908 y 1910. Se dio cuenta de que la representación
-                                del objeto en sus pinturas era perjudicial y que <strong>la belleza estaba en la riqueza cromática y 
+                                del objeto en sus pinturas era perjudicial y que <strong style="color: red;">la belleza estaba en la riqueza cromática y 
                                 la simplificación formal</strong>. 1910, <i>definitivo la abstracción</i>.</p>
-                              <p>1910 - 1914 Kandinsky pintó en <strong>tres categorías</strong>: <i>las impresiones</i>, inspiradas en la naturaleza;<i> las 
+                              <p>1910 - 1914 Kandinsky pintó en <strong style="color: red;">tres categorías</strong>: <i>las impresiones</i>, inspiradas en la naturaleza;<i> las 
                               improvisaciones</i>, emociones interiores; y <i>las composiciones</i>, que aunaban lo intuitivo con el más 
                               exigente rigor compositivo.</p>
                             <p>Primera Guerra Mundial, Kandinsky volvió a Moscú; allí trabajo en el marco del Departamento de Bellas
                                Artes del Comisariado Popular de la Educación. En 1917 se casó con Nina Andreievsky, y cuatro años más
-                                tarde se trasladó con ella a Alemania para <strong>incorporarse a la Bauhaus</strong> en la primera etapa de Weimar, 
+                                tarde se trasladó con ella a Alemania para <strong style="color: red;">incorporarse a la Bauhaus</strong> en la primera etapa de Weimar, 
                                 como profesor hasta poco antes de su disolución. <i>Escribió manifiestos y publicó el libro Punto y 
                                 línea sobre el plano</i>. Según él, cada forma y cada color representaban diferentes emociones o 
                                 conceptos: <i>el círculo</i> era la armonía, la espiritualidad; <i>el triángulo</i> representa agresividad y 
-                              <i>el cuadrado</i>, paz y calma. <strong>Clausurada la Bauhaus, el pintor se instaló en Francia.</strong></p>
+                              <i>el cuadrado</i>, paz y calma. <strong style="color: red;">Clausurada la Bauhaus, el pintor se instaló en Francia.</strong></p>
 
                             <div class="modal-footer">
                               <button type="button" class="btn btn-danger" style="border-radius:25px ;"data-dismiss="modal">Close</button>

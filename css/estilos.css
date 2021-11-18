@@ -22,13 +22,16 @@ section{
 .botonSearch{
     margin-left: 200px;
 }
+
+
+
 .botonLogin a{
     text-decoration: none;
-    font-size: 15px;
-    padding: 8px 20px 8px 20px;
+    font-size: 20px;
+    padding: 8px 15px 8px 15px;
     border: 2px solid #0062cc;
     color: #ff0000;
-    border-radius: 18px;
+    border-radius: 50%;
 }
 
 .botonLogin a:hover{
@@ -43,11 +46,11 @@ section{
 
 
 .border-warning {
-    border-color: #fae206!important;
+    border-color: #ffc107 !important;
 }
 
 .border{
-    border: 5px solid #fae206 !important;
+    border: 5px solid #ffc107 !important;
 }
 
 a{
@@ -82,6 +85,49 @@ body{
     padding-left: 100px;
 }
 
+
+.semanatxt{
+    text-align: center;
+    
+}
+
+.semanatit{
+    font-family: 'Baumans'; 
+    font-size: 40px; 
+    font-weight: 700;
+    text-align: center;
+}
+
+
+.imgbuscador{
+    border-radius: 10px;
+    border:10px solid #fae206 !important;
+    margin: auto;
+    display: block;
+}
+
+strong{
+    color: #185fd5; 
+}
+
+hr{
+    border-top: 1px solid #ff0000;
+}
+
+.pinturasemana{
+    width: 35%;
+    display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.semanasalir{
+padding-top: 0px;
+}
+
+.opcionesmenu{
+    border-color: #ffc107;
+}
 /*------------------------------------CAJA INICIO-------------------------------------------*/
 
 .cajaInicio{
@@ -97,6 +143,12 @@ body{
     font-family:"Baumans";
     padding: 10px;
 }
+
+.card-text a {
+    color: #FFFFFF;
+    text-decoration: none;
+}
+
 
 /*--------------------X---------------CAJA INICIO-------------------X-----------------------*/
 
@@ -212,3 +264,4 @@ body{
     transform: scale(1.1);
 }
 /*-------------------------X---------------------------CREACIONES-----------------X-------------------*/
+

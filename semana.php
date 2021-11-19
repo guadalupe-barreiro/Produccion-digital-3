@@ -3,6 +3,7 @@ session_start();
 
 if(array_key_exists( "logeado", $_SESSION)){
 
+
 ?>
 
 <!DOCTYPE html>
@@ -92,6 +93,7 @@ echo $_SESSION["nombre"];
  
 ?>
 <p>
+  
 
 
 <h4 class="semanasalir" style="text-align: center;">
